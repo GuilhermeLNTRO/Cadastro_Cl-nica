@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Paciente - Clínica</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Clínica Médica</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Home</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pacientes">Gerenciar Pacientes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-5">
+        <h2>Criar Paciente</h2>
+        <form action="/pacientes/criar" method="POST">
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required>
+            </div>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" name="idade" required>
+            </div>
+            <div class="mb-3">
+                <label for="diaMarcado" class="form-label">Dia Marcado</label>
+                <input type="date" class="form-control" id="diaMarcado" name="diaMarcado" required>
+            </div>
+            <div class="mb-3">
+                <label for="horaMarcada" class="form-label">Hora Marcada</label>
+                <input type="time" class="form-control" id="horaMarcada" name="horaMarcada" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </main>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
